@@ -41,19 +41,19 @@ schema-registry:
   environment:
     SCHEMA_REGISTRY_AVRO_COMPATIBILITY_LEVEL: none
 postgres-94:
-  build: ./tmp
+  build: ./build
   dockerfile: Dockerfile.postgres94
   hostname: postgres
   ports:
     - '54094:5432'
 postgres:
-  build: ./tmp
+  build: ./build
   dockerfile: Dockerfile.postgres
   hostname: postgres
   ports:
     - '54095:5432'
 bottledwater:
-  build: ./tmp
+  build: ./build
   dockerfile: Dockerfile.client
   hostname: bottledwater
   entrypoint:
